@@ -11,7 +11,7 @@ public class PruebaOrden{
             c3.addReview(new Random().nextInt(1, 6));
         }
 
-        ListaCasas lc = new ListaCasas();
+        ListaCasas lc = ListaCasas.getInstancia();
         lc.addCasa(c3);
         lc.addCasa(c2);
         lc.addCasa(c1);
