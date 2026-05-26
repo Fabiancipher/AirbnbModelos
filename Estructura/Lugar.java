@@ -1,17 +1,16 @@
-public class Lugar{
-    private final String ciudad;
-    private final String pais;
-
-    public Lugar(String c, String p){
-        ciudad = c;
-        pais = p;
+package Estructura;
+public abstract class Lugar{
+    public String nombre;
+    
+    public void add(Lugar a) {
+    	
     }
-
-    public String getCiudad() {
-        return ciudad;
+    
+    public void remove(Lugar a) {
+    	
     }
-
-    public String getPais() {
-        return pais;
+    
+    public String getNombre() {
+    	return nombre;
     }
 }
