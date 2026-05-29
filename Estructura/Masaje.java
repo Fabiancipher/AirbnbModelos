@@ -1,7 +1,7 @@
 package Estructura;
 
 public class Masaje extends Servicio {
-	public Masaje() {
-		
+	public Masaje(String n) {
+		nombre = n;
 	}
 }

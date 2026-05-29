@@ -1,5 +1,9 @@
 package Estructura;
 
-public class Servicio {
-
+public abstract class Servicio {
+	protected String nombre;
+	
+	public String getNomnbre() {
+		return nombre;
+	}
 }

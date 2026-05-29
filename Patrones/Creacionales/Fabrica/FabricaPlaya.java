@@ -10,13 +10,13 @@ public class FabricaPlaya implements FabricaAbstracta {
 	}
 
 	@Override
-	public Experiencia crearExperiencia() {
+	public Experiencia crearExperiencia(String n) {
 		return new Entrenamiento();
 	}
 
 	@Override
-	public Servicio crearServicio() {
-		return new Masaje();
+	public Servicio crearServicio(String n) {
+		return new Masaje(n);
 	}
 
 }

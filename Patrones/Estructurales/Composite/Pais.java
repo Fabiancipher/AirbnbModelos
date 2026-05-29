@@ -13,6 +13,10 @@ public class Pais extends Lugar {
 	
 	@Override
 	public void add(Lugar a) {
+		if(a instanceof Pais) {
+			System.out.println("No se puede añadir un pais a un pais");
+			return;
+		}
 		hijos.add(a);
 	}
 	

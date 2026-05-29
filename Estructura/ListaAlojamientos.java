@@ -2,11 +2,11 @@ package Estructura;
 import java.util.ArrayList;
 import DeComportamiento.Strategy.Estrategia;
 /**
- * ListaCasas es una clase que representa una colección de objetos Casa.
- * Permite agregar casas a la lista y ordenar las casas utilizando diferentes estrategias de ordenamiento
+ * ListaCasas es una clase que representa una colección de objetos Alojamiento.
+ * Permite agregar alojamientos a la lista y ordenar las casas utilizando diferentes estrategias de ordenamiento
  */
 public class ListaAlojamientos{
-    public ArrayList<Alojamiento> casas;
+    private ArrayList<Alojamiento> casas;
     private Estrategia sorter;
     private static ListaAlojamientos instancia;
 

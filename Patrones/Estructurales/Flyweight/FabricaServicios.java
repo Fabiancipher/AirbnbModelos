@@ -1,21 +1,24 @@
 package Estructurales.Flyweight;
-import java.util.HashMap;
 
-import Estructura.Lugar;
-import Estructurales.Composite.Pais;
+import Estructura.Servicio;
+import Creacionales.Fabrica.*;
+
+import java.util.HashMap;
 /**
  * Clase que mantiene un registro de los lugares que se van registrando
  */
-public class FabricaPais{
-    private final HashMap<String, Lugar> cache;
+public class FabricaServicios{
+    private final HashMap<String, Servicio> cache;
+    private final FabricaAbstracta fabrica;
 
-    public FabricaPais(){
+    public FabricaServicios(FabricaAbstracta f){
         cache = new HashMap<>();
+        fabrica = f;
     }
 
-    public Lugar getLugar(String n){
+    public Servicio getServicio(String n){
         if(!cache.containsKey(n)){
-            cache.put(n, new Pais(n));
+            cache.put(n, fabrica.crearServicio(n));
         }
         return cache.get(n);
     }

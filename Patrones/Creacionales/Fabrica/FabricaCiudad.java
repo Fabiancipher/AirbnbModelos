@@ -10,13 +10,13 @@ public class FabricaCiudad implements FabricaAbstracta {
 	}
 
 	@Override
-	public Experiencia crearExperiencia() {
+	public Experiencia crearExperiencia(String n) {
 		return new Cultural();
 	}
 
 	@Override
-	public Servicio crearServicio() {
-		return new Fotografia();
+	public Servicio crearServicio(String n) {
+		return new Fotografia(n);
 	}
 
 }
