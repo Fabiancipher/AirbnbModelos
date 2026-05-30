@@ -1,5 +1,8 @@
-package Estructura;
+package Creacionales.Singleton;
+
 import java.util.ArrayList;
+
+import Estructura.Alojamiento;
 import DeComportamiento.Strategy.Estrategia;
 /**
  * ListaCasas es una clase que representa una colección de objetos Alojamiento.

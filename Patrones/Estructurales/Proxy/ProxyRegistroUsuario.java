@@ -1,6 +1,6 @@
 package Estructurales.Proxy;
 
-import Estructura.Huesped;
+import DeComportamiento.Observador.Huesped;
 import EntradasSalidas.Salida;
 
 public class ProxyRegistroUsuario implements Registro {

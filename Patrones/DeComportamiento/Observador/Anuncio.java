@@ -1,6 +1,9 @@
-package Estructura;
+package DeComportamiento.Observador;
 
 import java.util.ArrayList;
+
+import Estructura.Alojamiento;
+import Creacionales.Prototipo.*;
 
 public class Anuncio implements Clonable {
 	public Alojamiento publicitado;

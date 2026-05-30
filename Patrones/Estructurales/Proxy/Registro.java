@@ -1,6 +1,6 @@
 package Estructurales.Proxy;
 
-import Estructura.Huesped;
+import DeComportamiento.Observador.Huesped;
 
 public interface Registro {
 	public void addUsuario(Huesped h);

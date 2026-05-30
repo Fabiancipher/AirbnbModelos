@@ -1,5 +1,8 @@
 package Estructura;
+
 import java.util.ArrayList;
+
+import DeComportamiento.Observador.*;
 public abstract class Alojamiento{
     protected Lugar lugar;
     protected Tipo tipo;

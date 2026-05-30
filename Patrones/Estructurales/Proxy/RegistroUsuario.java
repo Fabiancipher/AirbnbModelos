@@ -2,7 +2,7 @@ package Estructurales.Proxy;
 
 import java.util.ArrayList;
 
-import Estructura.Huesped;
+import DeComportamiento.Observador.Huesped;
 
 public class RegistroUsuario implements Registro {
 	

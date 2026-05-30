@@ -1,4 +1,4 @@
-package Estructura;
+package DeComportamiento.Observador;
 
 import java.util.HashMap;
 
