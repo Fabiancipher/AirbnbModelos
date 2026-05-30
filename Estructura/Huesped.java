@@ -2,18 +2,18 @@ package Estructura;
 
 import java.util.HashMap;
 
-public class Huesped extends Usuario {
+public class Huesped{
 	
-	public HashMap<String, Anuncio> favoritos;
-
-	@Override
-	public void realizarPago() {
-		
+	private final String nombre;
+	private HashMap<String, Anuncio> favoritos;
+	
+	public Huesped(String n) {
+		nombre = n;
+		favoritos = new HashMap<>();
 	}
-
-	@Override
-	public Boolean verificar() {
-		return true;
+	
+	public String getNombre() {
+		return nombre;
 	}
 	
 	public void addFavorito(Anuncio a) {

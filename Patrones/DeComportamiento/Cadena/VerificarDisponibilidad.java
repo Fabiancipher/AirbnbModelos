@@ -14,8 +14,10 @@ public class VerificarDisponibilidad extends Handler {
 	
 	@Override
 	public boolean handle(Reserva r) {
-		// TODO: Que haga algo antes de. Podría arrojar falso si, e.g: Alojamiento.disponible = false
-		if(next!=null) {return next.handle(r);}
+		if(next!=null) {
+			if(!r.getAlojamiento().disponible) {return false;}
+			return next.handle(r);
+		}
 		return false;
 	}
 }

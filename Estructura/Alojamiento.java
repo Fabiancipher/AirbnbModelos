@@ -8,6 +8,7 @@ public abstract class Alojamiento{
     protected String nombre;
     protected ArrayList<Review> reviews;
     protected Anuncio anuncio;
+    public boolean disponible;
     
     public Espacio getEspacio(){
     	return espacio;

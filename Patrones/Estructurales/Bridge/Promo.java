@@ -1,0 +1,23 @@
+package Estructurales.Bridge;
+
+public class Promo extends Notificacion {
+	
+	public Promo() {
+		
+	}
+	
+	public Promo(String c) {
+		contenido = c;
+	}
+	
+	@Override
+	public void setContenido(String c) {
+		contenido = c;
+	}
+	
+	@Override
+	public String getContenido() {
+		return "Promocion: "+contenido;
+	}
+	
+}
