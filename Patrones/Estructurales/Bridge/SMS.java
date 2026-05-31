@@ -2,6 +2,9 @@ package Estructurales.Bridge;
 
 import EntradasSalidas.SalidaConsola;
 
+/**
+ * Representa un canal de mensajes de texto
+ */
 public class SMS extends Medio{
 	
 	private final SalidaConsola salida;

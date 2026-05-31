@@ -2,14 +2,27 @@ package Estructurales.Proxy;
 
 import DeComportamiento.Observador.Huesped;
 import EntradasSalidas.Salida;
+import EntradasSalidas.SalidaConsola;
 
+/**
+ * Intermediario entre el registro real y el usuario
+ * <p>
+ * Contiene dos constructores. Si no se especifica el registro, esta clase puede generar uno propio. Sin embargo, esto fuerza a usar únicamente este proxy para acceder a dicho registro
+ * <p>
+ * Esencialmente, no serían intercambiables
+ */
 public class ProxyRegistroUsuario implements Registro {
 	
-	private RegistroUsuario servicio;
+	private Registro servicio;
 	private Salida salida;
 	
-	public ProxyRegistroUsuario(Salida s) {
-		salida = s;
+	public ProxyRegistroUsuario(Registro r) { n
+		servicio = r;
+		salida = new SalidaConsola();
+	}
+	
+	public ProxyRegistroUsuario() {
+		salida = new SalidaConsola();
 	}
 	
 	@Override
@@ -18,8 +31,14 @@ public class ProxyRegistroUsuario implements Registro {
 			salida.enviar("Nombre demasiado largo");
 			return;
 		}
-		servicio = new RegistroUsuario();
+		if(servicio==null) {
+			servicio = new RegistroUsuario();
+		}
 		servicio.addUsuario(h);
 	}
 	
+	@Override
+	public String getUsuarios() {
+		return servicio.getUsuarios();
+	}
 }

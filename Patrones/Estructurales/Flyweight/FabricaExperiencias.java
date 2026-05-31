@@ -9,11 +9,15 @@ import java.util.HashMap;
  */
 public class FabricaExperiencias{
     private final HashMap<String, Experiencia> cache;
-    private final FabricaAbstracta fabrica;
+    private FabricaAbstracta fabrica;
 
     public FabricaExperiencias(FabricaAbstracta f){
         cache = new HashMap<>();
         fabrica = f;
+    }
+    
+    public void setFabrica(FabricaAbstracta f) {
+    	fabrica = f;
     }
 
     public Experiencia getExperiencia(String p){

@@ -2,6 +2,9 @@ package DeComportamiento.Cadena;
 
 import Estructura.Reserva;
 
+/**
+ * Verifica que el usuario asociado a la reserva sea válido
+ */
 public class VerificarCliente extends Handler {
 	
 	public VerificarCliente() {

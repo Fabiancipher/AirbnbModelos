@@ -2,6 +2,9 @@ package DeComportamiento.Cadena;
 
 import Estructura.Reserva;
 
+/**
+ * Verifica que el alojamiento asociado a la reserva esté disponible
+ */
 public class VerificarDisponibilidad extends Handler {
 	
 	public VerificarDisponibilidad() {

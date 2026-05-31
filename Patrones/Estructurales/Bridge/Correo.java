@@ -2,6 +2,9 @@ package Estructurales.Bridge;
 
 import EntradasSalidas.SalidaConsola;
 
+/**
+ * Representa un canal para los mensajes enviados por email
+ */
 public class Correo extends Medio{
 	
 	private final SalidaConsola salida;

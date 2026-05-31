@@ -8,8 +8,12 @@ public class Cabin extends Alojamiento {
 
 	@Override
 	public double getPrecio() {
-		precio*=1.5;
-		return precio;
+		return precio*1.5;
+	}
+	
+	@Override
+	public String toString() {
+		return "Cabina || Precio: "+getPrecio();
 	}
 
 }

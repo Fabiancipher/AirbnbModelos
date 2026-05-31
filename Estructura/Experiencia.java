@@ -1,9 +1,12 @@
 package Estructura;
-
+/**
+ * Representa a una experiencia incluida en una reserva
+ */
 public abstract class Experiencia {
 	protected String nombre;
-	protected String fecha;
-	protected Lugar lugar;
 	
+	public String getNombre() {
+		return nombre;
+	}
 	
 }

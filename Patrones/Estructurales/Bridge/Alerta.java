@@ -1,5 +1,8 @@
 package Estructurales.Bridge;
 
+/**
+ * Representa una notificación de alerta para los huespedes
+ */
 public class Alerta extends Notificacion {
 	
 	public Alerta() {

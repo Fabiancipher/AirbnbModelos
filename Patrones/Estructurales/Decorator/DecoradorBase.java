@@ -2,6 +2,9 @@ package Estructurales.Decorator;
 
 import Estructura.*;
 
+/**
+ * Da las operaciones comunes para los demás decoradores
+ */
 public abstract class DecoradorBase implements Reserva {
 	protected Reserva wrappee;
 	
@@ -26,7 +29,5 @@ public abstract class DecoradorBase implements Reserva {
 	}
 	
 	@Override
-	public String info() {
-		return wrappee.info();
-	}
+	public abstract String toString();
 }

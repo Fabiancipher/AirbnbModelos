@@ -1,5 +1,8 @@
 package Estructurales.Bridge;
 
+/**
+ * Representa los recordatorios de fechas o similares que les llegan a los huespedes
+ */
 public class Recordatorio extends Notificacion {
 	
 	public Recordatorio() {

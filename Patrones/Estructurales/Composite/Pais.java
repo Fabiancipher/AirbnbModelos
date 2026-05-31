@@ -30,7 +30,13 @@ public class Pais extends Lugar {
 		StringBuilder sb = new StringBuilder();
 		sb.append(nombre).append(", ");
 		for(Lugar l : hijos) {
-			sb.append(l.getNombre()).append(", ");
+			sb.append(l.getNombre());
+			if(!l.equals(hijos.getLast())) {
+				sb.append(", ");
+			}
+			else {
+				sb.append(".");
+			}
 		}
 		return sb.toString();
 	}

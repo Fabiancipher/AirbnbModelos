@@ -1,6 +1,9 @@
 package Estructurales.Decorator;
 import Estructura.Reserva;
 
+/**
+ * Añade una "tarifa" de limpieza
+ */
 public class DecoradorLimpieza extends DecoradorBase {
 	
 	public DecoradorLimpieza(Reserva w) {
@@ -8,8 +11,8 @@ public class DecoradorLimpieza extends DecoradorBase {
 	}
 	
 	@Override
-	public String info() {
-		return "Limpieza + "+wrappee.info();
+	public String toString() {
+		return "Limpieza + "+wrappee.toString();
 	}
 	
 }

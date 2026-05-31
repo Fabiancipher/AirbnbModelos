@@ -1,5 +1,8 @@
 package Estructurales.Bridge;
 
+/**
+ * Representa las distintas promociones que le llegan a los usuarios
+ */
 public class Promo extends Notificacion {
 	
 	public Promo() {

@@ -1,6 +1,11 @@
 package Creacionales.Builder;
 
 import Estructura.*;
+/**
+ * Representa a un constructor de Reservas
+ * <p>
+ * Contiene operaciones comunes a cualquier constructor de reservas
+ */
 public abstract class Builder {
 	protected Alojamiento alojo;
 	protected Lugar destino;
@@ -23,12 +28,19 @@ public abstract class Builder {
 		experiencia = e;
 	}
 	
+	/**
+	 * Verifica si alguno de los campos es nulo. Antes de obtener el objeto, debería llamarse esta función
+	 * <p>
+	 * En caso de añadir más campos a los demás Builders, este método debería sobre-escribirse
+	 * @return True si alguno de los campos es nulo
+	 */
 	public boolean verificar() {
-		if(alojo == null || destino == null || servicio == null || experiencia == null) {
-			return false;
-		}
-		return true;
+		return (alojo == null || destino == null || servicio == null || experiencia == null);
 	}
 	
+	/**
+	 * Crea una reserva de algún tipo partícular
+	 * @return Una reserva
+	 */
 	public abstract Reserva getReserva();
 }

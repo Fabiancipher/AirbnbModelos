@@ -36,6 +36,10 @@ public class ListaAlojamientos{
         sorter = s;
     }
 
+    /**
+     * Obtiene la única instancia de ListaAlojamientos que puede existir durante ejecución
+     * @return La instancia de ListaAlojamientos
+     */
     public static ListaAlojamientos getInstancia(){
         if(instancia==null) instancia = new ListaAlojamientos();
         return instancia;

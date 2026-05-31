@@ -4,12 +4,17 @@ public class Apartamento extends Alojamiento {
 	
 	public Apartamento(double precio) {
 		this.precio = precio;
+		disponible = true;
 	}
 
 	@Override
 	public double getPrecio() {
-		precio *=1.2;
-		return precio;
+		return precio*1.2;
+	}
+	
+	@Override
+	public String toString() {
+		return "Apartamento || Precio: "+getPrecio();
 	}
 
 }

@@ -2,6 +2,9 @@ package DeComportamiento.Cadena;
 
 import Estructura.Reserva;
 
+/**
+ * Verifica que sea posible realizar el pago de la reserva
+ */
 public class VerificarPago extends Handler {
 	
 	public VerificarPago() {
