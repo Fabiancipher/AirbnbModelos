@@ -1,5 +1,7 @@
 package Estructura;
 
+import java.text.DecimalFormat;
+
 public class Cabin extends Alojamiento {
 	
 	public Cabin(double p) {
@@ -13,7 +15,7 @@ public class Cabin extends Alojamiento {
 	
 	@Override
 	public String toString() {
-		return "Cabina || Precio: "+getPrecio();
+		return "Cabina || Precio: "+new DecimalFormat("#.##").format(getPrecio())+" , Promedio Reseñas: "+new DecimalFormat("#.##").format(getPromedioReviews());
 	}
 
 }
