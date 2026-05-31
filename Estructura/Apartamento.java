@@ -1,5 +1,7 @@
 package Estructura;
 
+import java.text.DecimalFormat;
+
 public class Apartamento extends Alojamiento {
 	
 	public Apartamento(double precio) {
@@ -14,7 +16,7 @@ public class Apartamento extends Alojamiento {
 	
 	@Override
 	public String toString() {
-		return "Apartamento || Precio: "+getPrecio();
+		return "Apartamento || Precio: "+new DecimalFormat("#.##").format(getPrecio())+" , Promedio Reseñas: "+new DecimalFormat("#.##").format(getPromedioReviews());
 	}
 
 }

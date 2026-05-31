@@ -16,7 +16,7 @@ public class ProxyRegistroUsuario implements Registro {
 	private Registro servicio;
 	private Salida salida;
 	
-	public ProxyRegistroUsuario(Registro r) { n
+	public ProxyRegistroUsuario(Registro r) { 
 		servicio = r;
 		salida = new SalidaConsola();
 	}

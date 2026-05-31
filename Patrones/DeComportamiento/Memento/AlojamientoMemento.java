@@ -1,8 +1,6 @@
 package DeComportamiento.Memento;
 
 import Estructura.Lugar;
-import Estructura.Tipo;
-import Estructura.Espacio;
 
 /**
  * Memento que almacena el estado interno de un Alojamiento.
@@ -13,16 +11,12 @@ public class AlojamientoMemento {
     private final double precio;
     private final boolean disponible;
     private final Lugar lugar;
-    private final Tipo tipo;
-    private final Espacio espacio;
 
-    public AlojamientoMemento(String nombre, double precio, boolean disponible, Lugar lugar, Tipo tipo, Espacio espacio) {
+    public AlojamientoMemento(String nombre, double precio, boolean disponible, Lugar lugar) {
         this.nombre = nombre;
         this.precio = precio;
         this.disponible = disponible;
         this.lugar = lugar;
-        this.tipo = tipo;
-        this.espacio = espacio;
     }
 
     public String getNombre() {
@@ -41,11 +35,4 @@ public class AlojamientoMemento {
         return lugar;
     }
 
-    public Tipo getTipo() {
-        return tipo;
-    }
-
-    public Espacio getEspacio() {
-        return espacio;
-    }
 }

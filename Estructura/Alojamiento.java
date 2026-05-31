@@ -22,10 +22,7 @@ public abstract class Alojamiento{
     public void cambiarDisponibilidad() {
     	disponible = !disponible;
     }
-    
-    public Espacio getEspacio(){
-    	return espacio;
-    }
+  
 
     public Lugar getLugar(){
         return lugar;
@@ -36,10 +33,6 @@ public abstract class Alojamiento{
     }
 
     public abstract double getPrecio();
-
-    public Tipo getTipo() {
-        return tipo;
-    }
 
     public ArrayList<Review> getReviews() {
         return reviews;
@@ -76,7 +69,7 @@ public abstract class Alojamiento{
      * Guarda el estado actual en un Memento.
      */
     public AlojamientoMemento save() {
-        return new AlojamientoMemento(nombre, precio, disponible, lugar, tipo, espacio);
+        return new AlojamientoMemento(nombre, precio, disponible, lugar);
     }
 
     /**
@@ -88,8 +81,6 @@ public abstract class Alojamiento{
             this.precio = memento.getPrecio();
             this.disponible = memento.isDisponible();
             this.lugar = memento.getLugar();
-            this.tipo = memento.getTipo();
-            this.espacio = memento.getEspacio();
         }
     }
 
