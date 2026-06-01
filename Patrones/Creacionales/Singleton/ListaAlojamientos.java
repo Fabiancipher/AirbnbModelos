@@ -1,5 +1,7 @@
 package Creacionales.Singleton;
 
+import DeComportamiento.Iterador.*;
+
 import java.util.ArrayList;
 
 import Estructura.Alojamiento;
@@ -35,7 +37,35 @@ public class ListaAlojamientos{
     public void setSorter(Estrategia s){
         sorter = s;
     }
-
+    
+    /**
+     * Obtiene el alojamiento asociado al indice indicado
+     * <p>
+     * Para ser usado junto a los iteradores
+     * @param i El indice
+     * @see IteradorAlojamiento
+     * @return Un alojamiento
+     * */
+    public Alojamiento getAlojamiento(int i) { //Definitivamente una solución poco ideal.
+    	return casas.get(i);					//Se supone que el usuario no interactua directamente con esto
+    }											//sino con el iterador, pero no deja de ser una brecha.
+    
+    /**
+     * Obtiene el tamaño actual de la lista
+     * @return Un entero - el tamaño de la lista -
+     */
+    public int getSize() {
+    	return casas.size();
+    }
+    
+    /**
+     * Obtiene un nuevo iterador descendente asociado a esta lista
+     * @return Un iterador que va de atras hacia adelante
+     */
+    public IteradorAlojamientos getDescendente() {
+    	return new IteradorDescendente(this);
+    }
+    
     /**
      * Obtiene la única instancia de ListaAlojamientos que puede existir durante ejecución
      * @return La instancia de ListaAlojamientos

@@ -7,6 +7,10 @@ import DeComportamiento.Memento.AlojamientoCaretaker;
 import DeComportamiento.Memento.AlojamientoMemento;
 import DeComportamiento.Observador.*;
 import DeComportamiento.Strategy.*;
+import DeComportamiento.Visitante.*;
+import DeComportamiento.Iterador.*;
+import DeComportamiento.Mediador.*;
+import DeComportamiento.Estado.*;
 import EntradasSalidas.EntradaConsola;
 import EntradasSalidas.SalidaConsola;
 import Estructura.*;
@@ -53,14 +57,22 @@ public class Pruebas {
 			PruebaProxy();
 			break;
 		case 3:
-			salida.enviar("Cadena: ");
+			salida.enviar("Cadena: \n");
 			PruebaChain();
-			salida.enviar("Observer: ");
+			salida.enviar("Observer: \n");
 			PruebaObserver();
-			salida.enviar("Estrategia: ");
+			salida.enviar("Estrategia: \n");
 			PruebaStrategy();
-			salida.enviar("Memento: ");
+			salida.enviar("Memento: \n");
 			PruebaMemento();
+			salida.enviar("Iterador: \n");
+			PruebaIterador();
+			salida.enviar("Visitante:  \n");
+			PruebaVisitante();
+			salida.enviar("Mediador: \n");
+			PruebaMediador();
+			salida.enviar("Estado: \n");
+			PruebaEstado();
 		}
 	}
 	
@@ -351,5 +363,80 @@ public class Pruebas {
         System.out.println("Disponible  : " + (a.disponible ? "Sí" : "No"));
     
 	}
+    
+    public static void PruebaIterador() {
+    	Alojamiento apto = new Apartamento(10);
+		Alojamiento cabina = new Cabin(15);
+		Alojamiento apto2 = new Apartamento(20);
+    	ListaAlojamientos lista = ListaAlojamientos.getInstancia();
+    	lista.addAlojamiento(apto);
+    	lista.addAlojamiento(cabina);
+    	lista.addAlojamiento(apto2);
+    	
+    	lista.setSorter(new PorPrecio());
+    	lista.ordenar();
+    	
+    	IteradorAlojamientos iterador = lista.getDescendente();
+    	
+    	while(true) {
+    		if(iterador.hasNext()) {
+    			salida.enviar(iterador.getNext());
+    		}
+    		else {
+    			iterador.reset();
+    			break;
+    		}
+    	}
+    }
+    
+    public static void PruebaVisitante() {
+    	Alojamiento apto = new Apartamento(10);
+		Alojamiento cabina = new Cabin(15);
+		Alojamiento apto2 = new Apartamento(20);
+		
+		apto.setNombre("Apto1");
+		cabina.setNombre("Cabina");
+		apto2.setNombre("Apto2");
+		
+    	Alojamiento[] alojos = {apto, cabina, apto2};
+    	
+    	Visitante v = new VisitanteImpuestos();
+    	
+    	for(Alojamiento a: alojos) {
+    		salida.enviar(a.aceptar(v));
+    	}
+    }
+    
+    public static void PruebaMediador() {
+    	User huesped = new UserHuesped("Pepe");
+    	User anfitrion = new UserAnfitrion();
+    	Mediador mediador = new MediadorChat(anfitrion, huesped); //Una forma de asignar un mediador
+    	
+    	salida.enviar("Ingrese el mensaje a enviar: ");
+    	huesped.enviar("Anfitrion"); //En vez de llamar al mediador directamente, se puede hacer esto
+    	mediador.enviarMensaje(huesped.getNombre(), "Salir a fiesta mañana");
+    	salida.enviar("\n");
+    }
+    
+    public static void PruebaEstado() {
+    	Pago pago = new Pago();
+    	
+    	salida.enviar(pago.ingresarMetodo());
+    	salida.enviar(pago.cancelar());
+    	salida.enviar(pago.pagar());
+    	
+    	salida.enviar(pago.pagar());
+    	if(new Random().nextInt(0, 2)==1) {
+    		salida.enviar(pago.cancelar());
+    		return;
+    	}
+    	salida.enviar(pago.ingresarMetodo());
+    	
+    	salida.enviar(pago.cancelar());
+    	salida.enviar(pago.ingresarMetodo());
+    	salida.enviar(pago.pagar());
+    	
+    	salida.enviar(pago.cancelar());
+    }
 
 }

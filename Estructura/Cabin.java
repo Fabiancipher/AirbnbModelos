@@ -2,6 +2,8 @@ package Estructura;
 
 import java.text.DecimalFormat;
 
+import DeComportamiento.Visitante.Visitante;
+
 public class Cabin extends Alojamiento {
 	
 	public Cabin(double p) {
@@ -11,6 +13,11 @@ public class Cabin extends Alojamiento {
 	@Override
 	public double getPrecio() {
 		return precio*1.5;
+	}
+	
+	@Override
+	public String aceptar(Visitante v) {
+		return v.visitarCabina(this);
 	}
 	
 	@Override

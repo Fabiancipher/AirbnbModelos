@@ -1,5 +1,7 @@
 package Estructura;
 
+import DeComportamiento.Visitante.*;
+
 import java.text.DecimalFormat;
 
 public class Apartamento extends Alojamiento {
@@ -12,6 +14,11 @@ public class Apartamento extends Alojamiento {
 	@Override
 	public double getPrecio() {
 		return precio*1.2;
+	}
+	
+	@Override
+	public String aceptar(Visitante v) {
+		return v.visitarApartamento(this);
 	}
 	
 	@Override

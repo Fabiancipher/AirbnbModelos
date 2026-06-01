@@ -1,5 +1,7 @@
 package Estructura;
 
+import DeComportamiento.Visitante.*;
+
 import java.util.ArrayList;
 
 import DeComportamiento.Observador.*;
@@ -64,6 +66,12 @@ public abstract class Alojamiento{
     public Anuncio getAnuncio() {
         return anuncio;
     }
+    
+    /**
+     * Recibe a un visitante. El "que" hace con el alojamiento depende del visitante concreto
+     * @param v Un visitante
+     */
+    public abstract String aceptar(Visitante v);
 
     /**
      * Guarda el estado actual en un Memento.

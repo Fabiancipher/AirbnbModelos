@@ -9,7 +9,7 @@ public class ReservaBase implements Reserva {
 	private Servicio servicio;
 	private Experiencia experiencia;
 	
-	public ReservaBase(Alojamiento alo, Servicio ser, Experiencia exp, Lugar d) { //TODO: Como esto se puede construir con Builder, quizás sea buena idea no dejar este constructor gigante
+	public ReservaBase(Alojamiento alo, Servicio ser, Experiencia exp, Lugar d) {
 		alojo = alo;
 		servicio = ser;
 		experiencia = exp;
