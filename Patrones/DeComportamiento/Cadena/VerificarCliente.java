@@ -17,7 +17,6 @@ public class VerificarCliente extends Handler {
 	
 	@Override
 	public boolean handle(Reserva r) {
-		// TODO: Que haga algo antes de. Podría arrojar falso si, e.g: Busca en la BD y no encuentra al usuario
 		if(next!=null) {return next.handle(r);}
 		return false;
 	}

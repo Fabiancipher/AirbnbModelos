@@ -142,20 +142,20 @@ public class Pruebas {
 		Medio sms = new SMS(alerta);
 		Medio email = new Correo(alerta);
 		
-		salida.enviar(sms.toString());
-		salida.enviar(email.toString());
+		sms.enviar();
+		email.enviar();
 		
 		sms.setNoti(promo);
 		email.setNoti(promo);
 		
-		salida.enviar(sms.toString());
-		salida.enviar(email.toString());
+		sms.enviar();
+		email.enviar();
 		
 		sms.setNoti(record);
 		email.setNoti(record);
 		
-		salida.enviar(sms.toString());
-		salida.enviar(email.toString()+"\n");
+		sms.enviar();
+		email.enviar();
 	}
 	
 	public static void PruebaComposite() {
