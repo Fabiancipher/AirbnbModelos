@@ -6,10 +6,10 @@ public class Usuario {
     private String telefono;
     private Boolean mostrarNotificaciones;
 
-    public Usuario(String email, String telefono, String nombre, Boolean mostrarNotificaciones) {
+    public Usuario(String nombre, String email, String telefono, Boolean mostrarNotificaciones) {
+        this.nombre = nombre;
         this.email = email;
         this.telefono = telefono;
-        this.nombre = nombre;
         this.mostrarNotificaciones = mostrarNotificaciones;
     }
 
