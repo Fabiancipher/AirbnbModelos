@@ -1,0 +1,135 @@
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 28px;
+    align-items: start;
+}
+
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.extrasGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.extraItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--clr-border);
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 0.85rem;
+}
+
+.extraItem input {
+    display: none;
+}
+
+.extraItem:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.extraSel {
+    border-color: var(--clr-accent);
+    background: rgba(255, 56, 92, 0.06);
+}
+
+.extraIcon {
+    font-size: 1.4rem;
+}
+
+.estadoBar {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.estadoStep {
+    flex: 1;
+    min-width: 100px;
+    padding: 10px 12px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--clr-border);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.78rem;
+    color: var(--clr-muted);
+    transition: var(--transition);
+}
+
+.estadoActivo {
+    border-color: var(--est-color);
+    color: var(--est-color);
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.resumenRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--clr-border);
+    font-size: 0.85rem;
+    color: var(--clr-muted);
+    gap: 12px;
+}
+
+.resumenRow strong {
+    color: var(--clr-text);
+}
+
+.totalFinal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0 0;
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: var(--clr-text);
+}
+
+.chainPaso {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--clr-border);
+    transition: var(--transition);
+}
+
+.chainIcon {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1px solid var(--clr-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    transition: var(--transition);
+}
+
+.chainOk {
+    background: var(--clr-success);
+    border-color: var(--clr-success);
+    color: #fff;
+}
+
+.chainActivo {
+    background: var(--clr-accent);
+    border-color: var(--clr-accent);
+    color: #fff;
+    animation: pulse 0.8s infinite;
+}

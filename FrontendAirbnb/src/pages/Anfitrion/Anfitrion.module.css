@@ -1,0 +1,74 @@
+.grid {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+@media (max-width: 800px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.listaHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.anuncioItem {
+    padding: 14px 16px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--clr-border);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.anuncioItem:hover {
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.anuncioSel {
+    border-color: var(--clr-accent);
+    background: rgba(255, 56, 92, 0.05);
+}
+
+.amenGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 8px;
+}
+
+.amenBtn {
+    padding: 8px 12px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--clr-border);
+    background: var(--clr-surface2);
+    color: var(--clr-muted);
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: var(--transition);
+    text-align: left;
+}
+
+.amenBtn:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+    color: var(--clr-text);
+}
+
+.amenSel {
+    border-color: var(--clr-gold);
+    background: rgba(201, 168, 76, 0.08);
+    color: var(--clr-gold);
+}
+
+.previewCard {
+    margin-top: 20px;
+    padding: 20px;
+    background: var(--clr-surface2);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--clr-border);
+}

@@ -1,0 +1,98 @@
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    height: 68px;
+    background: rgba(13, 13, 13, 0.85);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--clr-border);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.brandIcon {
+    font-size: 1.4rem;
+    color: var(--clr-accent);
+}
+
+.brandName {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--clr-text);
+    letter-spacing: -0.02em;
+}
+
+.brandName em {
+    font-style: italic;
+    color: var(--clr-accent);
+    margin-left: 2px;
+}
+
+.links {
+    display: flex;
+    gap: 4px;
+}
+
+.link {
+    padding: 6px 16px;
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    color: var(--clr-muted);
+    font-size: 0.85rem;
+    font-weight: 400;
+    transition: var(--transition);
+}
+
+.link:hover {
+    color: var(--clr-text);
+    background: var(--clr-surface);
+}
+
+.active {
+    color: var(--clr-text) !important;
+    background: var(--clr-surface) !important;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.favBadge {
+    font-size: 0.85rem;
+    color: var(--clr-muted);
+}
+
+.favBadge span {
+    color: var(--clr-accent);
+    font-weight: 500;
+    margin-left: 2px;
+}
+
+.avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--clr-accent), var(--clr-accent2));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+}
